@@ -1,0 +1,130 @@
+addExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+addExpTail
+ -- '$' '+' '-' 
+addOp
+ -- '+' '-' 
+bType
+ -- 'float' 'int' 
+block
+ -- '{' 
+blockItem
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'float' 'if' 'int' 'return' '{' 
+blockItems
+ -- '!' '$' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'float' 'if' 'int' 'return' '{' 
+compUnit
+ -- '$' 'const' 'float' 'int' 'void' 
+cond
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+constDecl
+ -- 'const' 
+constDef
+ -- 'IDN' 
+constDefList
+ -- '$' ',' 
+constExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+constInitVal
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+decl
+ -- 'const' 'float' 'int' 
+elseblock
+ -- 'else' 
+eqExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+eqExpTail
+ -- '!=' '$' '==' 
+eqOp
+ -- '!=' '==' 
+exp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+expOpt
+ -- '!' '$' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+exprOrAssign
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+extemp
+ -- 'IDN' 'main' 
+extemp2
+ -- 'IDN' 'main' 
+externalDef
+ -- 'const' 'float' 'int' 'void' 
+externalTail
+ -- '(' ',' ';' '=' 
+funcDefTail
+ -- '(' 
+funcFParam
+ -- 'float' 'int' 
+funcFParamList
+ -- '$' ',' 
+funcFParams
+ -- 'float' 'int' 
+funcFParamsOpt
+ -- '$' 'float' 'int' 
+funcRParam
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+funcRParamList
+ -- '$' ',' 
+funcRParams
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+funcRParamsOpt
+ -- '!' '$' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+idExprSuffix
+ -- '$' '(' '+' '-' 
+idTail
+ -- '$' '(' '+' '-' '=' 
+ifblock
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'if' 'return' '{' 
+initVal
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+lAndExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+lAndExpTail
+ -- '$' '&&' 
+lOrExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+lOrExpTail
+ -- '$' '||' 
+lVal
+ -- 
+mulExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+mulExpTail
+ -- '$' '%' '*' '/' 
+mulOp
+ -- '%' '*' '/' 
+nonIdExpr
+ -- '!' '(' '+' '-' 'FLOAT' 'INT' 
+number
+ -- 'FLOAT' 'INT' 
+operatorTail
+ -- '$' '+' '-' 
+postfixTail
+ -- '$' '+' '-' 
+primaryExp
+ -- 
+program
+ -- '$' 'const' 'float' 'int' 'void' 
+relExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+relExpTail
+ -- '$' '<' '<=' '>' '>=' 
+relOp
+ -- '<' '<=' '>' '>=' 
+stmt
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'if' 'return' '{' 
+unaryExp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+unaryExpTail
+ -- '$' '(' 
+unaryOp
+ -- '!' '+' '-' 
+varDecl
+ -- 'float' 'int' 
+varDef
+ -- 'IDN' 
+varDefList
+ -- '$' ',' 
+varDefSuffix
+ -- '$' '=' 
+varFirstSuffix
+ -- '$' '=' 

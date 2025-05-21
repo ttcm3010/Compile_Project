@@ -1,0 +1,130 @@
+addExp
+ -- '!=' '&&' ')' ',' ';' '<' '<=' '==' '>' '>=' '||' 
+addExpTail
+ -- '!=' '&&' ')' ',' ';' '<' '<=' '==' '>' '>=' '||' 
+addOp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+bType
+ -- 'IDN' 'main' 
+block
+ -- '!' '#' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'else' 'float' 'if' 'int' 'return' 'void' '{' '}' 
+blockItem
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'float' 'if' 'int' 'return' '{' '}' 
+blockItems
+ -- '}' 
+compUnit
+ -- '#' 
+cond
+ -- ')' 
+constDecl
+ -- '!' '#' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'float' 'if' 'int' 'return' 'void' '{' '}' 
+constDef
+ -- ',' ';' 
+constDefList
+ -- ';' 
+constExp
+ -- ',' ';' 
+constInitVal
+ -- ',' ';' 
+decl
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'float' 'if' 'int' 'return' '{' '}' 
+elseblock
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'else' 'float' 'if' 'int' 'return' '{' '}' 
+eqExp
+ -- '&&' ')' '||' 
+eqExpTail
+ -- '&&' ')' '||' 
+eqOp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+exp
+ -- ')' ',' ';' 
+expOpt
+ -- ';' 
+exprOrAssign
+ -- ';' 
+extemp
+ -- '#' 'const' 'float' 'int' 'void' 
+extemp2
+ -- '#' 'const' 'float' 'int' 'void' 
+externalDef
+ -- '#' 'const' 'float' 'int' 'void' 
+externalTail
+ -- '#' 'const' 'float' 'int' 'void' 
+funcDefTail
+ -- '#' 'const' 'float' 'int' 'void' 
+funcFParam
+ -- ')' ',' 
+funcFParamList
+ -- ')' 
+funcFParams
+ -- ')' 
+funcFParamsOpt
+ -- ')' 
+funcRParam
+ -- ')' ',' 
+funcRParamList
+ -- ')' 
+funcRParams
+ -- ')' 
+funcRParamsOpt
+ -- ')' 
+idExprSuffix
+ -- ';' 
+idTail
+ -- ';' 
+ifblock
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'else' 'float' 'if' 'int' 'return' '{' '}' 
+initVal
+ -- ',' ';' 
+lAndExp
+ -- ')' '||' 
+lAndExpTail
+ -- ')' '||' 
+lOrExp
+ -- ')' 
+lOrExpTail
+ -- ')' 
+lVal
+ -- 
+mulExp
+ -- '!=' '&&' ')' '+' ',' '-' ';' '<' '<=' '==' '>' '>=' '||' 
+mulExpTail
+ -- '!=' '&&' ')' '+' ',' '-' ';' '<' '<=' '==' '>' '>=' '||' 
+mulOp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+nonIdExpr
+ -- ';' 
+number
+ -- '!=' '%' '&&' ')' '*' '+' ',' '-' '/' ';' '<' '<=' '==' '>' '>=' '||' 
+operatorTail
+ -- ';' 
+postfixTail
+ -- ';' 
+primaryExp
+ -- 
+program
+ -- '#' 
+relExp
+ -- '!=' '&&' ')' '==' '||' 
+relExpTail
+ -- '!=' '&&' ')' '==' '||' 
+relOp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+stmt
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'else' 'float' 'if' 'int' 'return' '{' '}' 
+unaryExp
+ -- '!=' '%' '&&' ')' '*' '+' ',' '-' '/' ';' '<' '<=' '==' '>' '>=' '||' 
+unaryExpTail
+ -- '!=' '%' '&&' ')' '*' '+' ',' '-' '/' ';' '<' '<=' '==' '>' '>=' '||' 
+unaryOp
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 
+varDecl
+ -- '!' '(' '+' '-' 'FLOAT' 'IDN' 'INT' 'const' 'float' 'if' 'int' 'return' '{' '}' 
+varDef
+ -- ',' ';' 
+varDefList
+ -- ';' 
+varDefSuffix
+ -- ',' ';' 
+varFirstSuffix
+ -- ',' ';' 

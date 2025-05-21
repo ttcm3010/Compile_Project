@@ -1,0 +1,118 @@
+program -> compUnit
+compUnit -> externalDef compUnit
+compUnit -> $
+externalDef -> constDecl
+externalDef -> void extemp
+extemp -> IDN funcDefTail
+externalDef -> bType extemp2
+extemp -> main funcDefTail
+extemp2 -> IDN externalTail
+extemp2 -> main funcDefTail
+funcDefTail -> ( funcFParamsOpt ) block
+externalTail -> ( funcFParamsOpt ) block
+externalTail -> varFirstSuffix varDefList ;
+varFirstSuffix -> = initVal
+varFirstSuffix -> $
+constDecl -> const bType constDef constDefList ;
+constDefList -> , constDef constDefList
+constDefList -> $
+constDef -> IDN = constInitVal
+constInitVal -> constExp
+varDecl -> bType IDN varDefSuffix varDefList ;
+varDefList -> , varDef varDefList
+varDefList -> $
+varDef -> IDN varDefSuffix
+varDefSuffix -> = initVal
+varDefSuffix -> $
+initVal -> exp
+bType -> int
+bType -> float
+funcFParamsOpt -> funcFParams
+funcFParamsOpt -> $
+funcFParams -> funcFParam funcFParamList
+funcFParamList -> , funcFParam funcFParamList
+funcFParamList -> $
+funcFParam -> bType IDN
+block -> { blockItems }
+blockItems -> blockItem blockItems
+blockItems -> $
+blockItem -> decl
+blockItem -> stmt
+decl -> constDecl
+decl -> varDecl
+
+stmt -> if ( cond ) ifblock
+ifblock -> stmt elseblock
+elseblock -> else stmt
+
+stmt -> return expOpt ;
+stmt -> block
+stmt -> exprOrAssign ;
+exprOrAssign -> IDN idTail
+exprOrAssign -> nonIdExpr
+idTail -> = exp
+idTail -> idExprSuffix
+idExprSuffix -> ( funcRParamsOpt ) postfixTail
+idExprSuffix -> operatorTail
+idExprSuffix -> $
+nonIdExpr -> ( exp ) postfixTail
+nonIdExpr -> number postfixTail
+nonIdExpr -> unaryOp unaryExp
+postfixTail -> operatorTail
+postfixTail -> $
+operatorTail -> addExpTail
+expOpt -> exp
+expOpt -> $
+exp -> addExp
+cond -> lOrExp
+lVal -> IDN
+primaryExp -> ( exp )
+primaryExp -> lVal
+primaryExp -> number
+number -> INT
+number -> FLOAT
+unaryExp -> IDN unaryExpTail
+unaryExp -> ( exp )
+unaryExp -> number
+unaryExp -> unaryOp unaryExp
+unaryExpTail -> ( funcRParamsOpt )
+unaryExpTail -> $
+unaryOp -> +
+unaryOp -> -
+unaryOp -> !
+funcRParamsOpt -> funcRParams
+funcRParamsOpt -> $
+funcRParams -> funcRParam funcRParamList
+funcRParamList -> , funcRParam funcRParamList
+funcRParamList -> $
+funcRParam -> exp
+mulExp -> unaryExp mulExpTail
+mulExpTail -> mulOp unaryExp mulExpTail
+mulExpTail -> $
+mulOp -> *
+mulOp -> /
+mulOp -> %
+addExp -> mulExp addExpTail
+addExpTail -> addOp mulExp addExpTail
+addExpTail -> $
+addOp -> +
+addOp -> -
+relExp -> addExp relExpTail
+relExpTail -> relOp addExp relExpTail
+relExpTail -> $
+relOp -> <
+relOp -> >
+relOp -> <=
+relOp -> >=
+eqExp -> relExp eqExpTail
+eqExpTail -> eqOp relExp eqExpTail
+eqExpTail -> $
+eqOp -> ==
+eqOp -> !=
+lAndExp -> eqExp lAndExpTail
+lAndExpTail -> && eqExp lAndExpTail
+lAndExpTail -> $
+lOrExp -> lAndExp lOrExpTail
+lOrExpTail -> || lAndExp lOrExpTail
+lOrExpTail -> $
+constExp -> addExp

@@ -1,0 +1,8 @@
+const int a = 5 ;
+int b = 9,c = 3 ;
+
+void func(){
+    const int d = 5;
+    c = b - c + a ;
+    return a + c;
+}
